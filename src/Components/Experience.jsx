@@ -21,8 +21,8 @@ const Experience = () => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={2} />
       <OrbitControls makeDefault />
-      {/* <SenCosAnimation funcion={"seno"} color={"pink"} />
-      <SenCosAnimation funcion={"cos"} color={"purple"} /> */}
+      <SenCosAnimation funcion={"seno"} color={"pink"} />
+      <SenCosAnimation funcion={"cos"} color={"red"} />
        <Stars count={3000} />
       <Piano position={[0, -2, 0]} scale={0.1}/>
       <PhoenixBird />

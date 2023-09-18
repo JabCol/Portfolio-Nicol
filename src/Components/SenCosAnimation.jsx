@@ -43,12 +43,12 @@ const SenCosAnimation = ({ funcion, color }) => {
   return (
     <>
       <Stars count={3000} />
-      <mesh ref={sphereRef}>
+      <mesh ref={sphereRef} scale={0.2}>
         <sphereGeometry args={[0.5, 32, 32]} />
         <meshMatcapMaterial color={color} />
       </mesh>
       {/* Línea que representa la trayectoria */}
-      <line ref={lineRef}>
+      <line ref={lineRef} scale={0.1}>
         <bufferGeometry />
         <lineBasicMaterial color={color} linewidth={2} />
       </line>
