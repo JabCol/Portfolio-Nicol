@@ -4,6 +4,8 @@ import { Stars } from "@react-three/drei";
 import SenCosAnimation from "./SenCosAnimation";
 import { Piano } from "./Piano";
 import PhoenixBird from "./PhoenixBird";
+import Lights from "./Lights";
+import Environments from "./Environments";
 
 const Experience = () => {
 
@@ -18,15 +20,14 @@ const Experience = () => {
 
   return (
     <>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={2} />
       <OrbitControls makeDefault />
-      <SenCosAnimation funcion={"seno"} color={"pink"} />
-      <SenCosAnimation funcion={"cos"} color={"red"} />
-       <Stars count={3000} />
+      {/* <SenCosAnimation funcion={"seno"} color={"pink"} />
+      <SenCosAnimation funcion={"cos"} color={"blue"} /> */}
+      <Lights />
+      <Environments />
       <Piano position={[0, -2, 0]} scale={0.1}/>
-      <PhoenixBird />
-      <mesh position-y={-2} rotation-x={-Math.PI / 2}>
+      <PhoenixBird position={[0, 0, 0]} rotation-y={-Math.PI * 0.15} scale={0.0009}/>
+      <mesh position-y={-2} rotation-x={-Math.PI / 2} receiveShadow>
         <planeGeometry attach="geometry" args={[12, 12]} />
         <meshStandardMaterial {...propsTexture} attach="material" color="red" />
       </mesh>

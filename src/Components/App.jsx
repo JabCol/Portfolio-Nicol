@@ -15,7 +15,7 @@ const App = () => {
         name={"Nicol Valeria Ortiz R."}
         biografhy={"I'm a programmer at Universidad del Valle"}
       />
-      <Canvas camera={cameraSettings}>
+      <Canvas shadows camera={cameraSettings}>
         <Experience />
       </Canvas>
     </>
